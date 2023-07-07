@@ -8,11 +8,11 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("frgp")
+@ComponentScan("frgp.utn.edu.ar")
 public class AppConfig {
    
 	@Bean
-	InternalResourceViewResolver viewResolver() {
+	public InternalResourceViewResolver viewResolver() {
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 		viewResolver.setPrefix("/WEB-INF/vistas/");
 		viewResolver.setSuffix(".jsp");
