@@ -19,27 +19,9 @@ public class HomeController {
 		return "Home";
 	}
 	
-	@PostMapping("/loginSuccesful")
-	public String login(RedirectAttributes redirectAttributes) {
-	    redirectAttributes.addAttribute("loginok", "true");
-	    return "redirect:/home";
-	}
-	
-	@GetMapping("/")
-	public String InitialHome() {
-		
-		return "Home";
-	}
-	
 	@GetMapping("/access-denied")
 	public String AccesoDenegado() {
 		
 		return "AccessDenied";
-	}
-	
-	@RequestMapping(value = {"/registro"}, method = {RequestMethod.GET, RequestMethod.POST})
-	public String Registro(@ModelAttribute("usuario") Usuario usuario) {
-		
-		return "RegistroUsuario";
 	}
 }

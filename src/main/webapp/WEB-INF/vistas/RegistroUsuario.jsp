@@ -17,7 +17,7 @@
 								<h1 style="text-align: center;">CREACION DE USUARIO</h1>
 								<hr>
 								<div class="row align-items-md-stretch">
-								<c:if test="${param.error != null and param.error eq pass}">
+								<c:if test="${param.pass != null}">
 									<div class="row align-items-md-stretch">
 							            <div class="d-flex justify-content-center" style="text-align: center;">
 							               	<h3 class="w-auto  m-2 py-1 px-3 bg-danger border rounded-3">Las contraseñas no coinciden</h3>	

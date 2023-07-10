@@ -31,12 +31,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		
 		http
 			.authorizeRequests()
-			.antMatchers("/","/home","/registro").permitAll()
+			.antMatchers("/","/login","/registro").permitAll()
+			.antMatchers("/home").authenticated()
 			.antMatchers("/clientes").hasAnyAuthority("ADMIN","USUARIO")
 			.antMatchers("/usuarios").hasAnyAuthority("ADMIN")
 			.antMatchers("/prestamos").hasAnyAuthority("CLIENTE","ADMIN")
 			.and()
-				.formLogin().loginPage("/home").loginProcessingUrl("/home").permitAll()
+				.formLogin().loginPage("/login").loginProcessingUrl("/login").permitAll()
 				.successForwardUrl("/loginSuccesful").permitAll()
 				.and()
 				.httpBasic()

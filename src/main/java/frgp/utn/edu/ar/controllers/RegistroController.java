@@ -24,13 +24,13 @@ public class RegistroController {
 	    String passwordConfirm = request.getParameter("passwordConfirm");
 	    
 	    if (!password.equals(passwordConfirm)) {
-	        return "redirect:/registro?error=pass";
+	        return "redirect:/registro?pass=true";
 	    }
 		String passwordCodificada = passwordEncoder.encode(usuario.getPassword());
 		usuario.setPassword(passwordCodificada);
 		
 		loginNegocio.guardarUsuario(usuario);
 		
-		return "redirect:/home?newuser";
+		return "redirect:/login?newuser";
 	}
 }
