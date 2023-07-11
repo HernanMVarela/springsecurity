@@ -28,13 +28,12 @@
 							<p>Administración de usuarios.</p>
 							<hr>
 							<sec:authorize access="hasAnyAuthority('ADMIN')">
-								<a href="usuarios" class="btn w-50 boton mr-1" style="--clr2:#fcbe21">Usuarios</a>
+								<a href="usuarios" class="btn-p but mr-1" style="--clr2:#fcbe21">Usuarios</a>
 							</sec:authorize>
 							<sec:authorize access="hasAnyAuthority('CLIENTE','USUARIO')">
-							    <input type="submit" class="btn w-50 boton mr-1" style="--clr2:#fcbe21" disabled value="Usuarios">
+							    <input type="submit" class="btn-p mr-1" style="--clr2:#787878" disabled value="Usuarios">
 							</sec:authorize>
 						</div>
-
 						<div class="col p-2 m-3 bg-light border rounded-3 cuadro_uno" style="--clr:#3fad3d; text-align: center;">
 							<img class="img-responsive p-3" style="width: 50%;" src="<c:url value="/assets/images/clientes.png" />"/>
 							<h1>Clientes</h1>
@@ -42,13 +41,12 @@
 							<p>Administración de clientes.</p>
 							<hr>
 							<sec:authorize access="hasAnyAuthority('ADMIN','USUARIO')">
-								<button class="btn w-50 boton mr-1" style="--clr2:#3fad3d" onclick="location.href='clientes'">Clientes</button>
+								<a href="clientes" class="btn-p but mr-1" style="--clr2:#3fad3d">Clientes</a>
 							</sec:authorize>
 							<sec:authorize access="hasAnyAuthority('CLIENTE')">
-							    <input type="submit" class="btn w-50 boton mr-1" style="--clr2:#3fad3d" disabled value="Clientes">
+							    <input type="submit" class="btn-p mr-1" style="--clr2:#787878" disabled value="Clientes">
 							</sec:authorize>
 						</div>
-						
 						<div class="col p-2 m-3 bg-light border rounded-3 cuadro_uno" style="--clr:#1e9bff; text-align: center;">
 							<img class="img-responsive p-3" style="width: 50%;" src="<c:url value="/assets/images/prestamos.png" />"/>
 							<h1>Prestamos</h1>
@@ -56,10 +54,10 @@
 							<br>
 							<hr>
 							<sec:authorize access="hasAnyAuthority('ADMIN','CLIENTE')">
-								<a href="prestamos" class="btn w-50 boton mr-1" style="--clr2:#1e9bff">Prestamos</a>
+								<a href="prestamos" class="btn-p but mr-1" style="--clr2:#1e9bff">Prestamos</a>
 							</sec:authorize>
 							<sec:authorize access="hasAnyAuthority('USUARIO')">
-							    <input type="submit" class="btn w-50 boton mr-1" style="--clr2:#1e9bff" disabled value="Prestamos">
+							    <input type="submit" class="btn-p mr-1" style="--clr2:#787878" disabled value="Prestamos">
 							</sec:authorize>
 						</div>
 					</div>

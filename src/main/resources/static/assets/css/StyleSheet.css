@@ -133,21 +133,33 @@ body{
         box-shadow: 0 0 50px var(--clr);
     }
 
-.but {
-    position: relative;
-    color: var(--clr);
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 0.8em;
-    letter-spacing: 0.05em;
-    font-weight: 300;
-    padding: 5px 10px;
-    transition: 0.3s;
-    border: var(--clr) 0.125em solid;
-    border-radius: 15px;
+
+.btn-p {
+	display: inline-block;
+	font-weight: 400;
+	line-height: 1.4;
+	color: var(--clr2);
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	background-color: transparent;
+	border: 2px solid var(--clr2);
+	border-radius: 15px;
     border-block-width: 5px;
     border-inline-width: 5px;
+	padding: .375rem .75rem;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.but {
+    position: relative;
+    transition: 0.3s;
     z-index: 1;
 }
 
@@ -156,7 +168,7 @@ body{
         letter-spacing: 0.15em;
         box-shadow: 0 0 35px var(--clr);
         color: black;
-        border-color: var(--clr2);
+        border-color: #212529;
     }
 
     .but::before {
